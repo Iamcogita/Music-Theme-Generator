@@ -3,7 +3,7 @@ export interface Song {
     autor?: string
 }
 
-export type Genre = "rock" | "pop" | "hiphop" | "metal";
+export type Genre = "rock" | "pop" | "hiphop" | "punk";
 
 export const pop: Song[] = [
   { name: "Shape of You", autor: "Ed Sheeran" },
@@ -19,24 +19,28 @@ export const rock: Song[] = [
   { name: "Stairway to Heaven", autor: "Led Zeppelin" },
   { name: "Bohemian Rhapsody", autor: "Queen" },
   { name: "Hotel California", autor: "Eagles" },
-  { name: "Imagine", autor: "John Lennon" },
-  { name: "Sweet Child O' Mine", autor: "Guns N' Roses" },
-  { name: "Black Dog", autor: "Led Zeppelin" },
+  { name: "Master of Puppets", autor: "Metallica" },
+  { name: "Iron Man", autor: "Black Sabbath" },
+  { name: "Welcome to the Jungle", autor: "Guns N' Roses" },
   { name: "Comfortably Numb", autor: "Pink Floyd" },
 ];
 
 export const hiphop: Song[] = [
-  { name: "Killing in the Name", autor: "Rage Against the Machine" },
   { name: "N.Y. State of Mind", autor: "Nas" },
-  { name: "In the Air Tonight", autor: "Phil Collins" },
   { name: "Hypnotize", autor: "The Notorious B.I.G." },
   { name: "99 Problems", autor: "Jay-Z" },
+  { name: "Rapper's Delight", autor: "The Sugarhill Gang" },
+  { name: "California Love", autor: "2Pac" },
+  { name: "The Real Slim Shady", autor: "Eminem" },
+  { name: "Still" , autor: "Geto Boys"}
 ];
 
-export const metal: Song[] = [
-  { name: "Master of Puppets", autor: "Metallica" },
-  { name: "Black Sabbath", autor: "Black Sabbath" },
-  { name: "Welcome to the Jungle", autor: "Guns N' Roses" },
-  { name: "Crazy Train", autor: "Ozzy Osbourne" },
-  { name: "Hallowed Be Thy Name", autor: "Iron Maiden" },
+export const punk: Song[] = [
+  { name: "God Save the Queen", autor: "Sex Pistols" },
+  { name: "California Über Alles", autor: "Dead Kennedys" },
+  { name: "American Jesus", autor: "Bad Religion" },
+  { name: "All the Small Things", autor: "Blink-182" },
+  { name: "Rock Lobster", autor: "B-52's" },
+  { name: "Basket Case", autor: "Green Day" },
+  { name: "Same In The End", autor: "Sublime" },
 ];

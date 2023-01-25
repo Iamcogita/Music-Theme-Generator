@@ -1,4 +1,4 @@
-import { hiphop, metal, rock, pop} from "../../Utils/Musics";
+import { hiphop, punk, rock, pop} from "../../Utils/Musics";
 import { StyledButton, HeaderContainer } from "./StyledHeader";
 
 const Header = (props: { handleGenre: any; }) => {
@@ -8,8 +8,8 @@ const Header = (props: { handleGenre: any; }) => {
     <HeaderContainer>
       <StyledButton onClick={() => handleGenre(pop)}>Pop</StyledButton>
       <StyledButton onClick={() => handleGenre(rock)}>Rock</StyledButton>
-      <StyledButton onClick={() => handleGenre(metal)}>Metal</StyledButton>
-      <StyledButton onClick={() => handleGenre(hiphop)}>Hip-Hop</StyledButton>
+      <StyledButton onClick={() => handleGenre(punk)}>Punk</StyledButton>
+      <StyledButton onClick={() => handleGenre(hiphop)}>HipHop</StyledButton>
     </HeaderContainer>
   );
 };
