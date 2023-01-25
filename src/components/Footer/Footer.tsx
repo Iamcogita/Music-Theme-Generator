@@ -1,15 +1,15 @@
-import { FooterContainer } from "./StyledFooter"
+import { FooterContainer } from "./StyledFooter";
 
 interface FooterProps {
-    paragraph: string
+  paragraph: string;
 }
 
 const Footer = ({ paragraph }: FooterProps) => {
-    return (
-        <FooterContainer>
-        <p>{paragraph}</p>
-      </FooterContainer>
-    )
-}
+  return (
+    <FooterContainer>
+      <p>{paragraph}</p>
+    </FooterContainer>
+  );
+};
 
-export default Footer
+export default Footer;

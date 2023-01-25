@@ -1,9 +1,11 @@
-interface Geners {
+export interface Song {
     name: string,
-    autor: string
+    autor?: string
 }
 
-export const pop: Geners[] = [
+export type Genre = "rock" | "pop" | "hiphop" | "metal";
+
+export const pop: Song[] = [
   { name: "Shape of You", autor: "Ed Sheeran" },
   { name: "Uptown Funk", autor: "Mark Ronson ft. Bruno Mars" },
   { name: "Sorry", autor: "Justin Bieber" },
@@ -13,7 +15,7 @@ export const pop: Geners[] = [
   { name: "Roar", autor: "Katy Perry" },
 ];
 
-export const rock: Geners[] = [
+export const rock: Song[] = [
   { name: "Stairway to Heaven", autor: "Led Zeppelin" },
   { name: "Bohemian Rhapsody", autor: "Queen" },
   { name: "Hotel California", autor: "Eagles" },
@@ -23,7 +25,7 @@ export const rock: Geners[] = [
   { name: "Comfortably Numb", autor: "Pink Floyd" },
 ];
 
-export const hipHop: Geners[] = [
+export const hiphop: Song[] = [
   { name: "Killing in the Name", autor: "Rage Against the Machine" },
   { name: "N.Y. State of Mind", autor: "Nas" },
   { name: "In the Air Tonight", autor: "Phil Collins" },
@@ -31,7 +33,7 @@ export const hipHop: Geners[] = [
   { name: "99 Problems", autor: "Jay-Z" },
 ];
 
-export const metal: Geners[] = [
+export const metal: Song[] = [
   { name: "Master of Puppets", autor: "Metallica" },
   { name: "Black Sabbath", autor: "Black Sabbath" },
   { name: "Welcome to the Jungle", autor: "Guns N' Roses" },

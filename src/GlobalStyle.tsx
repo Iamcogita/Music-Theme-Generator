@@ -6,11 +6,32 @@ const GlobalStyle = createGlobalStyle`
         font-family: Arial, Helvetica, sans-serif;
         font-size: larger;
         background:#b4b4b4 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoAgMAAADxkFD+AAAACVBMVEUAAAC0trS0srTXB3G5AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAMBJREFUGJVFUFsOwzAI45K2RP+Z1N2HSj1Ads5hyLpKUSgxfmCIFwAHw0joyxuWIDyAqC5wCAAYTj1jgVYX3AWziFw96DYXGosarxO3Ne2pf9NQPwwgdymeFMY2gUea7rL08u7+x2RBx6bzdJ8ySsNXpWD5zw9kst9Iz/hhL0lMO4chRtuW4oTjkgR9LClFdDa2s5K4qMTezTZZW9weFlKsKtkpJeFiOB6/kiuGUMyuBeBen/eCh5fvxlbiNWZx4wvZsZIbSdFJqQAAAABJRU5ErkJggg==);
-        color: #ffffff;
+        color: #c9c3c0;
+    }
+    nav{
+
     }
     body {
-        //background: ${({ theme }: { theme: Theme }) => theme.colors.body};
-        color: hsl(192, 100%, 9%)
+        margin: 0%;
+        height: 100vh;
+        background: ${({ theme }: { theme: Theme }) => theme.colors.body};
+    }
+    footer{
+        
+    }
+    button {
+        font-size: larger;
+        border: none;
+        text-decoration-line: thick;
+        &:active , :focus {
+            text-decoration: solid underline 4px ;
+            text-underline-offset: 10px;
+        }
+        &:hover {
+            cursor: pointer;
+            text-decoration: solid underline 2px ;
+            text-underline-offset: 10px;
+        }
     }
 `;
 
