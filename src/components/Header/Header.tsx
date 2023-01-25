@@ -1,4 +1,4 @@
-import { hiphop, punk, rock, pop} from "../../Utils/Musics";
+import { hiphop, punk, rock, pop} from "../../Utils/Songs";
 import { StyledButton, HeaderContainer } from "./StyledHeader";
 
 const Header = (props: { handleGenre: any; }) => {

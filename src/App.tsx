@@ -4,7 +4,8 @@ import GlobalStyle from "./GlobalStyle";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import { Genre } from "./Utils/Musics";
+import { Genre } from "./Utils/Songs";
+
 
 export type Theme = {
   colors: ColorScheme;
@@ -18,9 +19,9 @@ interface ColorScheme {
 
 const theme: Theme = {
   colors: {
-    nav: "#884242",
-    body: "rgba( 100, 100, 100, 0.25 )",
-    footer: "#884242"
+    nav: "#181818",
+    body: "rgba( 145, 120, 90, 0.9 ); mix-blend-mode: overlay;",
+    footer: "#181818"
   },
 };
 
@@ -29,6 +30,7 @@ function App() {
   const handleGenre = (genre: Genre) => {
     setGenre(genre);
   };
+
   return (
     <>
       <ThemeProvider theme={theme}>

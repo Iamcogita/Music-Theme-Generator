@@ -1,8 +1,9 @@
 import { Container, StyledList } from "./StyledMain";
-import { Song } from "./../../Utils/Musics";
+import { Song } from "../../Utils/Songs";
 
 const Main = (props: { handleGenre: any }) => {
   const { handleGenre } = props;
+
   const List = () => {
     return handleGenre !== null ? (
       <h1>
@@ -15,7 +16,7 @@ const Main = (props: { handleGenre: any }) => {
         ))}
       </h1>
     ) : (
-      <h1>Choose genre</h1>
+      <p><h1>Choose a Genre</h1></p>
     );
   };
 

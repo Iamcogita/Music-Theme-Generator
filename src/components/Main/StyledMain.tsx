@@ -10,7 +10,6 @@ export const Container = Styled.div`
     height: 100%;
     padding-top: 20px;
     color: black;
-    background-color: transparent;
 `
 export const StyledList = Styled.li`
     display: flex;
