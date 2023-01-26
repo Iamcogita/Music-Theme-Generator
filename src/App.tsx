@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { SetStateAction, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./GlobalStyle";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import { Genre } from "./Utils/Songs";
+import { pop, Song } from "./Utils/Songs";
 
 
 export type Theme = {
@@ -20,23 +20,23 @@ interface ColorScheme {
 const theme: Theme = {
   colors: {
     nav: "#181818",
-    body: "rgba( 145, 120, 90, 0.9 ); mix-blend-mode: overlay;",
+    body: "rgba( 145, 120, 120, 0.5 ); mix-blend-mode: overlay;",
     footer: "#181818"
   },
 };
 
 function App() {
-  const [genre, setGenre] = useState<null | Genre>(null);
-  const handleGenre = (genre: Genre) => {
-    setGenre(genre);
+  const [genre, setGenre] = useState< Song[]>(pop);
+  const handleGenre = (genre: Song) => {
+    setGenre(genre as unknown as SetStateAction<Song[]>);
   };
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} >
         <GlobalStyle />
         <Header handleGenre={handleGenre}/>
-        <Main handleGenre={genre}/>
+        <Main songs={genre}/>
         <Footer paragraph="Copyright ©2023 My Website" />
       </ThemeProvider>
     </>
