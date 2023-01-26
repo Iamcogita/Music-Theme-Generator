@@ -28,7 +28,7 @@ const theme: Theme = {
 function App() {
   const [genre, setGenre] = useState< Song[]>(pop);
   const handleGenre = (genre: Song) => {
-    setGenre(genre as unknown as SetStateAction<Song[]>);
+    setGenre(genre as SetStateAction<Song[]>);
   };
 
   return (
