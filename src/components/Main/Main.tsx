@@ -10,7 +10,7 @@ const Main = (props: { songs: Song[] }) => {
 
   return (
     <ContainerWrapper genre={songs[0].genre as string}>
-      <h1 style={{fontFamily:"fantasy", letterSpacing: "2px" }}> {`${musicGenre} !`}</h1>
+      <h1 style={{letterSpacing: "3px" , textDecoration:"underline" , textUnderlineOffset: "10px"}}> {`${musicGenre} !`}</h1>
       {songs.map((song: Song, index: number) => (
         <StyledList key={index}>
           <p>

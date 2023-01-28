@@ -6,6 +6,14 @@ height: 76vh;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+font-family: ${(props) =>
+  props.genre === "pop"
+    ? "cursive"
+    : props.genre === "punk"
+    ? "monospace"
+    : props.genre === "rock"
+    ? "sans-serif"
+    : "serif"};
 background-color: ${(props) =>
   props.genre === "pop"
     ? "pink"
