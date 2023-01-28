@@ -5,6 +5,7 @@ display: flex;
 height: 76vh;
 flex-direction: column;
 justify-content: center;
+align-items: center;
 background-color: ${(props) =>
   props.genre === "pop"
     ? "pink"

@@ -15,20 +15,20 @@ export const StyledButton = Styled.button`
     flex-direction: row;
     padding-top: 40px;
     padding-bottom: 20px;
-    background-color: transparent;
     color: white;
+    background-color: transparent;
     font-size: larger;
-        border: none;
-        text-decoration-line: thick;
-        &:active , :focus {
-            text-decoration: solid underline 4px ;
-            text-underline-offset: 10px;
-        }
-        &:hover {
-            cursor: pointer;
-            text-decoration: solid underline 2px ;
-            text-underline-offset: 10px;
-            transform: translateY(-2px);
-            transition: all 0.2s ease-in-out;
-        }
+    border: none;
+    text-decoration-line: thick;
+    &:active , :focus {
+        text-decoration: solid underline 4px ;
+        text-underline-offset: 10px;
+    }
+    &:hover {
+    cursor: pointer;
+        text-decoration: solid underline 2px ;
+        text-underline-offset: 10px;
+        transform: translateY(-2px);
+        transition: all 0.2s ease-in-out;
+    }
 `;

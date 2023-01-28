@@ -1,5 +1,5 @@
-import { hiphop, punk, rock, pop} from "../../Utils/Songs";
 import { StyledButton, HeaderContainer } from "./StyledHeader";
+import { hiphop, punk, rock, pop} from "../../Utils/Songs";
 
 const Header = (props: { handleGenre: any; }) => {
   const {handleGenre} = props;
