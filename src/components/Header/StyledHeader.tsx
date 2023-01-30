@@ -20,11 +20,11 @@ export const StyledButton = Styled.button`
     font-size: larger;
     border: none;
     text-decoration-line: thick;
-    &:active , :focus {
+    :active , :focus {
         text-decoration: solid underline 4px ;
         text-underline-offset: 10px;
     }
-    &:hover {
+    :hover {
     cursor: pointer;
         text-decoration: solid underline 2px ;
         text-underline-offset: 10px;
