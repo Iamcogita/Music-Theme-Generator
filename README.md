@@ -1,6 +1,12 @@
-# Getting Started with Create React App
-
+# Music Theme Generator
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ <table>
+ <tr>
+  <td align="center"><a href="https://github.com/Iamcogita"><img src="https://avatars.githubusercontent.com/u/99983918?v=4" width="100px;" alt="David Mendes"/><br /><sub><b>David Mendes</b></sub></a><br /></td>
+  
+  <td align="center"><a href="https://github.com/joaogoncalves96"><img src=https://avatars.githubusercontent.com/u/97889790?v=4" width="100px;" alt="João Gonçalves"/><br /><sub><b>João Gonçalves</b></sub></a><br /></td>
+  </tr>
+</table>
 
 ## Available Scripts
 
