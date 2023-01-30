@@ -8,12 +8,12 @@ justify-content: center;
 align-items: center;
 font-family: ${(props) =>
   props.genre === "pop"
-    ? "cursive"
+    ? "Hachi Maru Pop"
     : props.genre === "punk"
-    ? "monospace"
+    ? "Gloria Hallelujah"
     : props.genre === "rock"
     ? "sans-serif"
-    : "serif"};
+    : "Hanalei Fill"};
 background-color: ${(props) =>
   props.genre === "pop"
     ? "pink"
