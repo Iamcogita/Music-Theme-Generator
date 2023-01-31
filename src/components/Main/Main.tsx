@@ -2,6 +2,7 @@ import { ContainerWrapper, StyledList } from "./StyledMain";
 import { Song } from "../../Utils/Songs";
 import { CustomButton } from "../CustomButton/CustomButton";
 import useReloadPage from "../../hooks/useReloadPage";
+import 'animate.css';
 
 const Main = (props: { songs: Song[] }) => {
   const { songs } = props;
@@ -18,7 +19,7 @@ const Main = (props: { songs: Song[] }) => {
           </p>
         </StyledList>
       ))}
-      <CustomButton onClick={() => reload()}> try me </CustomButton>
+      <CustomButton className="animate__animated animate__bounce" onClick={() => reload()} > try me </CustomButton>
     </ContainerWrapper>
   );
 };

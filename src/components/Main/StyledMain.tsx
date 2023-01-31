@@ -2,9 +2,11 @@ import Styled from "styled-components";
 
 export const ContainerWrapper = Styled.div<{ genre: string }>`
 display: flex;
-height: 76vh;
+max-height: 100vh ;
+min-height: 80vh;
+padding-bottom: 4%;
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 font-family: ${(props) =>
   props.genre === "pop"
@@ -26,7 +28,7 @@ background-color: ${(props) =>
 
 export const StyledList = Styled.li`
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     justify-content: center;
     align-self: center;
