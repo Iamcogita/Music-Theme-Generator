@@ -29,6 +29,6 @@ export const StyledButton = Styled.button<{isActive:boolean}>`
         text-decoration: solid underline 2px ;
         text-underline-offset: 10px;
         transform: translateY(-2px);
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-out;
     }
 `;
