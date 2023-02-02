@@ -20,10 +20,10 @@ background-color: ${(props) =>
   props.genre === "pop"
     ? "pink"
     : props.genre === "punk"
-    ? "yellow"
+    ? "#dfdba684"
     : props.genre === "rock"
     ? "white"
-    : "cyan"};
+    : "#26d8f0ab"};
 `;
 
 export const StyledList = Styled.li`
@@ -32,5 +32,6 @@ export const StyledList = Styled.li`
     font-weight: bold;
     justify-content: center;
     align-self: center;
-    color: black;
+    color: rgba( 50, 6, 44, 0.8 ); 
+    mix-blend-mode: multiply;
 `;

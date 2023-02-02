@@ -14,26 +14,19 @@ interface ColorScheme {
   nav: string;
   footer: string;
   body: string;
-  font: string;
+  font?: string;
 }
 
 const theme: Theme = {
   colors: {
-    font: `${(props: { genre: Song[] }) =>
-      props.genre === pop
-        ? "pink"
-        : props.genre === punk
-        ? "yellow"
-        : props.genre === rock
-        ? "white"
-        : "cyan"}`,
     nav: "#181818",
-    body: "rgba( 145, 120, 120, 0.5 ) ;mix-blend-mode: overlay;",
+    body: "rgba( 145, 120, 120, 0.8 ); mix-blend-mode: overlay;",
     footer: "#181818",
   },
 };
 
 function App() {
+  //initial value for state
   const randomGenre = () => {
     let genre = Math.random();
     if (genre > 0.75) return rock;
@@ -42,20 +35,21 @@ function App() {
     else return hiphop;
   };
 
+  //this state stores an array of type Song
   const [genre, setGenre] = useState<Song[]>(randomGenre);
 
+  //handle click events
   const handleGenre = (genre: Song) => {
     setGenre(genre as SetStateAction<Song[]>);
   };
 
-
   return (
     <>
       <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Header handleGenre={handleGenre} activeGenre={genre}/>
-          <Main songs={genre}/>
-          <Footer paragraph={"Copyright ©2023"} />
+        <GlobalStyle />
+        <Header handleGenre={handleGenre} activeGenre={genre} />
+        <Main songs={genre} />
+        <Footer paragraph={"Copyright ©2023"} />
       </ThemeProvider>
     </>
   );
