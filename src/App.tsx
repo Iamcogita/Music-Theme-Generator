@@ -19,9 +19,9 @@ interface ColorScheme {
 
 const theme: Theme = {
   colors: {
-    nav: "#181818",
+    nav: "#181818; mix-blend-mode: overlay;",
     body: "rgba( 145, 120, 120, 0.8 ); mix-blend-mode: overlay;",
-    footer: "#181818",
+    footer: "#1a1313;",
   },
 };
 

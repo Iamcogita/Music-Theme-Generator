@@ -32,8 +32,7 @@ const Main = (props: { songs: Song[] }) => {
         className="animate__animated animate__bounce"
         onClick={() => reload()}
       >
-        {" "}
-        try me{" "}
+        try me
       </CustomButton>
     </ContainerWrapper>
   );
