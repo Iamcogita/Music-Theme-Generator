@@ -47,7 +47,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header handleGenre={handleGenre} activeGenre={genre} />
+        <Header setGenre={handleGenre} activeGenre={genre} />
         <Main songs={genre} />
         <Footer paragraph={"Copyright ©2023"} />
       </ThemeProvider>

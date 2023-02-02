@@ -7,14 +7,13 @@ export const HeaderContainer = Styled.nav`
     gap: 40px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
-    height: 140px;
+    height: 120px;
 `;
 
 export const StyledButton = Styled.button<{isActive:boolean}>`
     display: flex;
     flex-direction: row;
     padding-top: 40px;
-    padding-bottom: 20px;
     color: white;
     background-color: transparent;
     font-size: larger;
