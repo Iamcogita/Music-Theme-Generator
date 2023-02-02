@@ -19,7 +19,7 @@ interface ColorScheme {
 
 const theme: Theme = {
   colors: {
-    font: `${(props: { genre: Song[]; }) =>
+    font: `${(props: { genre: Song[] }) =>
       props.genre === pop
         ? "pink"
         : props.genre === punk
@@ -28,32 +28,33 @@ const theme: Theme = {
         ? "white"
         : "cyan"}`,
     nav: "#181818",
-    body: "rgba( 145, 120, 120, 0.5 ); mix-blend-mode: overlay;",
+    body: "rgba( 145, 120, 120, 0.5 ) ;mix-blend-mode: overlay;",
     footer: "#181818",
   },
 };
 
-const randomGenre = () => {
-  let genre = Math.random()
-  if(genre> 0.75)return rock;
-  if(genre> 0.5)return pop;
-  if(genre> 0.25)return punk;
-  else return hiphop;
-}
-
 function App() {
+  const randomGenre = () => {
+    let genre = Math.random();
+    if (genre > 0.75) return rock;
+    if (genre > 0.5) return pop;
+    if (genre > 0.25) return punk;
+    else return hiphop;
+  };
+
   const [genre, setGenre] = useState<Song[]>(randomGenre);
+
   const handleGenre = (genre: Song) => {
     setGenre(genre as SetStateAction<Song[]>);
   };
 
   return (
     <>
-      <ThemeProvider theme={theme} >
-        <GlobalStyle />
-        <Header handleGenre={handleGenre}/>
-        <Main songs={genre}/>
-        <Footer paragraph="Copyright ©2023 My Website" />
+      <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Header handleGenre={handleGenre} activeGenre={genre}/>
+          <Main songs={genre} />
+          <Footer paragraph="Copyright ©2023 My Website" />
       </ThemeProvider>
     </>
   );

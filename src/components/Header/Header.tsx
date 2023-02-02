@@ -1,15 +1,16 @@
 import { StyledButton, HeaderContainer } from "./StyledHeader";
-import { hiphop, punk, rock, pop} from "../../Utils/Songs";
+import { hiphop, punk, rock, pop, Song } from "../../Utils/Songs";
 
-const Header = (props: { handleGenre: any; }) => {
-  const {handleGenre} = props;
-  
+const Header = (props: { handleGenre: Song[] | any , activeGenre: Song[] }) => {
+  const { handleGenre } = props;
+  const { activeGenre} = props;
+
   return (
     <HeaderContainer>
-      <StyledButton onClick={() => handleGenre(pop)}>Pop</StyledButton>
-      <StyledButton onClick={() => handleGenre(rock)}>Rock</StyledButton>
-      <StyledButton onClick={() => handleGenre(punk)}>Punk</StyledButton>
-      <StyledButton onClick={() => handleGenre(hiphop)}>HipHop</StyledButton>
+        <StyledButton isActive={activeGenre === pop} onClick={() => handleGenre(pop)}>Pop</StyledButton>
+        <StyledButton isActive={activeGenre === rock} onClick={() => handleGenre(rock)}>Rock</StyledButton>
+        <StyledButton isActive={activeGenre === punk} onClick={() => handleGenre(punk)}>Punk</StyledButton>
+        <StyledButton isActive={activeGenre === hiphop} onClick={() => handleGenre(hiphop)}>HipHop</StyledButton>
     </HeaderContainer>
   );
 };

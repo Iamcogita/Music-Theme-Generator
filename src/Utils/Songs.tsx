@@ -6,7 +6,7 @@ export interface Song {
 
 export const pop: Song[] = [
   { name: "Shape of You", autor: "Ed Sheeran", genre: "pop" },
-  { name: "Uptown Funk", autor: "Mark Ronson ft. Bruno Mars", genre: "pop" },
+  { name: "Uptown Funk", autor: "Bruno Mars", genre: "pop" },
   { name: "Sorry", autor: "Justin Bieber", genre: "pop" },
   { name: "Sugar", autor: "Maroon 5", genre: "pop" },
   { name: "All of Me", autor: "John Legend", genre: "pop" },

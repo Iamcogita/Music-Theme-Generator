@@ -2,7 +2,7 @@ import { ContainerWrapper, StyledList } from "./StyledMain";
 import { Song } from "../../Utils/Songs";
 import { CustomButton } from "../CustomButton/CustomButton";
 import useReloadPage from "../../hooks/useReloadPage";
-import 'animate.css';
+import "animate.css";
 
 const Main = (props: { songs: Song[] }) => {
   const { songs } = props;
@@ -11,7 +11,16 @@ const Main = (props: { songs: Song[] }) => {
 
   return (
     <ContainerWrapper genre={songs[0].genre as string}>
-      <h1 style={{letterSpacing: "3px" , textDecoration:"underline" , textUnderlineOffset: "10px"}}> {`${musicGenre} !`}</h1>
+      <h1
+        style={{
+          letterSpacing: "3px",
+          textDecoration: "underline",
+          textUnderlineOffset: "10px",
+        }}
+      >
+        {" "}
+        {`${musicGenre} !`}
+      </h1>
       {songs.map((song: Song, index: number) => (
         <StyledList key={index}>
           <p>
@@ -19,7 +28,13 @@ const Main = (props: { songs: Song[] }) => {
           </p>
         </StyledList>
       ))}
-      <CustomButton className="animate__animated animate__bounce" onClick={() => reload()} > try me </CustomButton>
+      <CustomButton
+        className="animate__animated animate__bounce"
+        onClick={() => reload()}
+      >
+        {" "}
+        try me{" "}
+      </CustomButton>
     </ContainerWrapper>
   );
 };

@@ -1,4 +1,4 @@
-import Styled from "styled-components";
+import Styled, {css} from "styled-components";
 
 export const HeaderContainer = Styled.nav`
     margin: auto;
@@ -10,7 +10,7 @@ export const HeaderContainer = Styled.nav`
     height: 140px;
 `;
 
-export const StyledButton = Styled.button`
+export const StyledButton = Styled.button<{isActive:boolean}>`
     display: flex;
     flex-direction: row;
     padding-top: 40px;
@@ -20,10 +20,10 @@ export const StyledButton = Styled.button`
     font-size: larger;
     border: none;
     text-decoration-line: thick;
-    :active , :focus {
-        text-decoration: solid underline 4px ;
-        text-underline-offset: 10px;
-    }
+    ${({isActive}) => isActive && css`
+        text-decoration: solid underline 6px ;
+        text-underline-offset: 14px;
+    `}
     :hover {
     cursor: pointer;
         text-decoration: solid underline 2px ;
