@@ -6,9 +6,11 @@ interface FooterProps {
 
 const Footer = ({ paragraph }: FooterProps) => {
   return (
-    <FooterContainer>
-      <p>{paragraph}</p>
-    </FooterContainer>
+    <>
+      <FooterContainer>
+        {paragraph} <img src="andro-logo192.png" height={"20px"} alt={"logo"} /> 
+      </FooterContainer>
+    </>
   );
 };
 

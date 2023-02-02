@@ -48,13 +48,14 @@ function App() {
     setGenre(genre as SetStateAction<Song[]>);
   };
 
+
   return (
     <>
       <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Header handleGenre={handleGenre} activeGenre={genre}/>
-          <Main songs={genre} />
-          <Footer paragraph="Copyright ©2023 My Website" />
+          <Main songs={genre}/>
+          <Footer paragraph={"Copyright ©2023"} />
       </ThemeProvider>
     </>
   );
